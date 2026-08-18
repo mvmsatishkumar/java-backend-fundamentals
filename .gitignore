@@ -1,0 +1,22 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+**/target/
+
+# Build output
+out/
+**/out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
