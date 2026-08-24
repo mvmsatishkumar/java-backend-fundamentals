@@ -31,6 +31,42 @@ The projects are organized as individual learning modules:
 | `spring-data-jpa-demo` | Spring Data JPA and repository abstraction |
 | `spring-boot-mvc-demo` | Spring Boot, MVC, controllers, web applications |
 
+## JDBC Fundamentals
+
+The JDBC practice project focuses on database connectivity and core JDBC operations using PostgreSQL.
+
+### Learned
+
+- JDBC database connectivity with `DriverManager`
+- `Connection`, `Statement`, and `ResultSet`
+- `executeQuery()` and `executeUpdate()`
+- CRUD operations: `INSERT`, `SELECT`, `UPDATE`, `DELETE`
+- `PreparedStatement` and parameterized SQL
+- Batch processing with `addBatch()` and `executeBatch()`
+- Transaction management with `commit()` and `rollback()`
+- `DatabaseMetaData` and `ResultSetMetaData`
+- Try-with-resources for JDBC resource management
+- Maven dependency management for the PostgreSQL JDBC driver
+
+### Project Structure
+
+```text
+jdbc-practice/
+├── pom.xml
+└── src/
+    └── main/
+        └── java/
+            ├── Main.java
+            ├── ConnectionDemo.java
+            ├── StatementDemo.java
+            ├── CrudDemo.java
+            ├── PreparedStatementDemo.java
+            ├── BatchDemo.java
+            ├── TransactionDemo.java
+            └── MetadataDemo.java
+            
+```         
+
 ## Servlet Fundamentals
 
 ### Learned
