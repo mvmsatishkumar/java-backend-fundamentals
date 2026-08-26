@@ -86,3 +86,146 @@ The Servlet practice project uses embedded Tomcat and maps:
 
 ```text
 http://localhost:8080/greetings/hello
+```
+
+## Hibernate Fundamentals
+
+The Hibernate practice project covers ORM fundamentals, JPA entity mapping, persistence, HQL, entity lifecycle, persistence context, transactions, relationships, and fetch strategies using PostgreSQL.
+
+### Hibernate Setup
+
+- Maven project setup
+- Hibernate ORM dependency configuration
+- PostgreSQL JDBC driver
+- `hibernate.cfg.xml`
+- Database connection and dialect configuration
+- `SessionFactory` creation
+- `Session` management
+- `SessionFactory` lifecycle and resource management
+
+### JPA Entity Mapping
+
+- `@Entity`
+- `@Id`
+- `@GeneratedValue`
+- `@Column`
+- `@Table`
+- Entity-to-table mapping
+- Field-to-column mapping
+- Generated primary keys
+
+### Session & Transactions
+
+- `SessionFactory`
+- `Session`
+- `Transaction`
+- `beginTransaction()`
+- `commit()`
+- `rollback()`
+- Transaction boundaries
+- Basic transaction failure handling
+
+### Entity Lifecycle
+
+- Transient state
+- Persistent state
+- Detached state
+- `persist()`
+- `detach()`
+- Entity state transitions
+- Dirty checking of persistent entities
+
+### CRUD Operations
+
+- `persist()` for inserting entities
+- `find()` for retrieving entities
+- `getReference()` for obtaining entity references
+- Updating persistent entities
+- Automatic updates through dirty checking
+- `remove()` for deleting entities
+
+### HQL
+
+- HQL `SELECT`
+- `WHERE` conditions
+- Parameterized HQL queries
+- `LIKE`
+- `ORDER BY`
+- Aggregate functions
+- `COUNT()`
+- `AVG()`
+- HQL `JOIN`
+- `JOIN FETCH`
+
+### Query API
+
+- `createQuery()`
+- Typed HQL queries
+- `setParameter()`
+- `getResultList()`
+- `getSingleResult()`
+
+### Persistence Context
+
+- Persistence context
+- First-level cache
+- Entity identity within a persistence context
+- Dirty checking
+- `flush()`
+- `refresh()`
+- `clear()`
+- `detach()`
+- Synchronization between entities and the database
+
+### Entity Relationships
+
+- Entity relationships and foreign keys
+- `@OneToMany`
+- `@ManyToOne`
+- `mappedBy`
+- Relationship ownership
+- Cascade operations
+- Bidirectional relationships
+- Collection mapping
+- Foreign-key based associations
+
+### Fetch Strategies
+
+- `FetchType.LAZY`
+- `FetchType.EAGER`
+- Lazy loading
+- Explicit initialization of lazy associations
+- `JOIN FETCH`
+- Difference between lazy and eager loading
+
+### Exception Handling
+
+- Hibernate exception handling
+- Transaction failure handling
+- Rollback on operation failure
+- Handling invalid entity operations
+- Resource cleanup with try-with-resources
+
+### Project Structure
+
+```text
+hibernate-practice/
+├── pom.xml
+├── src/
+│   └── main/
+│       ├── java/
+│       │   ├── ConfigurationDemo.java
+│       │   ├── CrudDemo.java
+│       │   ├── EntityLifecycleDemo.java
+│       │   ├── ExceptionDemo.java
+│       │   ├── FetchTypeDemo.java
+│       │   ├── HibernateUtil.java
+│       │   ├── HqlDemo.java
+│       │   ├── Laptop.java
+│       │   ├── Main.java
+│       │   ├── PersistenceContextDemo.java
+│       │   ├── RelationshipDemo.java
+│       │   ├── Student.java
+│       │   └── TransactionDemo.java
+│       └── resources/
+│           └── hibernate.cfg.xml
