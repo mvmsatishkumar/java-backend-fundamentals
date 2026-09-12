@@ -221,7 +221,7 @@ hibernate-practice/
 │       │   ├── FetchTypeDemo.java
 │       │   ├── HibernateUtil.java
 │       │   ├── HqlDemo.java
-│       │   ├── Laptop.java
+│       │   ├── springcore.Laptop.java
 │       │   ├── Main.java
 │       │   ├── PersistenceContextDemo.java
 │       │   ├── RelationshipDemo.java
@@ -229,3 +229,113 @@ hibernate-practice/
 │       │   └── TransactionDemo.java
 │       └── resources/
 │           └── hibernate.cfg.xml
+```
+## Spring Core Fundamentals
+
+The Spring Core practice project focuses on the Spring IoC container, dependency injection, bean configuration, component scanning, dependency resolution, bean scopes, and bean lifecycle management.
+
+### Spring Setup
+
+- Maven project setup
+- Spring Context dependency
+- `ApplicationContext`
+- `AnnotationConfigApplicationContext`
+
+### Inversion of Control (IoC)
+
+- Inversion of Control
+- Spring IoC container
+- Object creation and dependency management by Spring
+- `BeanFactory`
+- `ApplicationContext`
+- Difference between `BeanFactory` and `ApplicationContext`
+
+### Dependency Injection
+
+- Dependency Injection
+- Constructor Injection
+- Setter Injection
+- Field Injection
+- Dependency resolution by type
+
+### Configuration
+
+- `@Configuration`
+- `@Bean`
+- `@ComponentScan`
+- Component Scanning
+- Explicit bean configuration
+- Difference between `@Bean` and `@Component`
+
+### Stereotype Annotations
+
+- `@Component`
+- `@Service`
+- `@Repository`
+- `@Controller`
+- Role of specialized stereotype annotations
+- Automatic bean detection through component scanning
+
+### Dependency Resolution
+
+- `@Autowired`
+- `@Qualifier`
+- Resolving multiple beans of the same type
+- `@Primary`
+- Constructor-based dependency resolution
+- Setter-based dependency resolution
+- Qualifier placement on injection points
+
+### Bean Scopes
+
+- Singleton scope
+- Prototype scope
+- One singleton instance per `ApplicationContext`
+- New prototype instance for each bean request
+- Request scope — web-specific
+- Session scope — web-specific
+
+### Bean Lifecycle
+
+- Bean instantiation
+- Constructor execution
+- Initialization phase
+- `@PostConstruct`
+- Bean usage
+- `@PreDestroy`
+- Bean destruction
+- ApplicationContext startup and shutdown
+
+### ApplicationContext Lifecycle
+
+- Creating the `ApplicationContext`
+- Bean creation during context startup
+- Dependency injection
+- Bean initialization
+- Application execution
+- Closing the `ApplicationContext`
+- Bean destruction during context shutdown
+- `context.close()`
+
+### Project Structure
+```text
+spring-core/
+├── pom.xml
+└── src/
+    └── main/
+        └── java/
+            └── springcore/
+                ├── AppConfig.java
+                ├── IoCDemo.java
+                ├── DependencyInjectionDemo.java
+                ├── SetterInjectionDemo.java
+                ├── FieldInjectionDemo.java
+                ├── ComponentDemo.java
+                ├── QualifierDemo.java
+                ├── PrimaryDemo.java
+                ├── BeanScopeDemo.java
+                ├── BeanLifecycleDemo.java
+                ├── ApplicationContextLifecycleDemo.java
+                ├── StereotypeAnnotationsDemo.java
+                └── BeanAnnotationDemo.java
+```

@@ -27,7 +27,7 @@ public class Student {
 
     @OneToMany(
             mappedBy = "student",
-            cascade = CascadeType.ALL,
+            cascade = CascadeType.ALL, // Operations performed will be propagated to other entities.
             fetch = FetchType.LAZY
     )
     private List<Laptop> laps;
