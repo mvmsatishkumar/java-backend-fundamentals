@@ -339,3 +339,80 @@ spring-core/
                 ├── StereotypeAnnotationsDemo.java
                 └── BeanAnnotationDemo.java
 ```
+
+## Spring XML Configuration
+
+The Spring XML configuration practice project focuses on XML-based bean configuration, dependency injection, autowiring, bean scopes, lifecycle management, and modular XML configuration.
+
+### XML Bean Configuration
+
+- XML-based Spring bean configuration
+- `ClassPathXmlApplicationContext`
+- `<bean>` definitions
+- Bean IDs and class mapping
+- XML namespaces and schema configuration
+
+### Dependency Injection
+
+- Constructor Injection using `<constructor-arg>`
+- Setter Injection using `<property>`
+- Dependency references using `ref`
+- Literal value injection using `value`
+- Difference between `ref` and `value`
+
+### XML Autowiring
+
+- XML autowiring
+- `autowire="byType"`
+- Automatic dependency resolution by type
+- Setter-based autowiring
+
+### Bean Scopes
+
+- Singleton scope
+- Prototype scope
+- One singleton instance per `ApplicationContext`
+- New prototype instance for each bean request
+- Request scope — web-specific
+- Session scope — web-specific
+
+### Bean Lifecycle
+
+- Bean instantiation
+- Initialization using `init-method`
+- Bean usage
+- Destruction using `destroy-method`
+- ApplicationContext shutdown
+- Singleton vs prototype destruction behavior
+
+### Modular XML Configuration
+
+- `<import>` for importing XML configuration files
+- Splitting bean definitions across multiple configuration files
+- Central configuration with imported module configurations
+
+### Project Structure
+```text
+spring-xml-configuration/
+├── pom.xml
+└── src/
+    └── main/
+        ├── java/
+        │   └── springxml/
+        │       ├── XmlConfigDemo.java
+        │       ├── XmlConstructorInjectionDemo.java
+        │       ├── XmlSetterInjectionDemo.java
+        │       ├── XmlAutowireDemo.java
+        │       ├── XmlValueInjectionDemo.java
+        │       ├── XmlScopeLifecycleDemo.java
+        │       └── XmlImportDemo.java
+        └── resources/
+            ├── applicationContext.xml
+            ├── constructor-config.xml
+            ├── setter-config.xml
+            ├── autowire-config.xml
+            ├── value-config.xml
+            ├── scope-lifecycle-config.xml
+            ├── common-config.xml
+            └── main-config.xml
+```
