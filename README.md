@@ -416,3 +416,85 @@ spring-xml-configuration/
             ├── common-config.xml
             └── main-config.xml
 ```
+
+## Spring JDBC
+
+The Spring JDBC practice project focuses on database access using Spring's JDBC abstraction, `JdbcTemplate`, PostgreSQL, parameterized queries, result mapping, and DAO-based data access.
+
+### Spring JDBC Setup
+
+- Maven project setup
+- Spring Context configuration
+- Spring JDBC dependency
+- PostgreSQL JDBC driver
+- `DataSource` configuration
+- `JdbcTemplate` configuration
+- Dependency injection of `DataSource` into `JdbcTemplate`
+- Environment variables for database credentials
+
+### JdbcTemplate
+
+- `JdbcTemplate`
+- `query()`
+- `queryForObject()`
+- `update()`
+- Simplified JDBC resource management
+- Executing SQL through Spring's JDBC abstraction
+
+### Query Operations
+
+- `SELECT` queries
+- Single-row retrieval with `queryForObject()`
+- Multiple-row retrieval with `query()`
+- Parameterized SQL queries
+- `PreparedStatement` handling through `JdbcTemplate`
+
+### Result Mapping
+
+- `RowMapper`
+- Lambda-based row mapping
+- Mapping `ResultSet` rows to Java objects
+- `BeanPropertyRowMapper`
+- Mapping database columns to JavaBean properties
+
+### CRUD Operations
+
+- `INSERT`
+- `SELECT`
+- `UPDATE`
+- `DELETE`
+- Parameterized CRUD operations
+- Rows-affected result from `update()`
+
+### DAO Layer
+
+- Data Access Object pattern
+- Separation of database logic from application logic
+- Constructor injection of `JdbcTemplate`
+- DAO methods for querying and modifying data
+- `findAll()`
+- `findById()`
+- `save()`
+- `update()`
+- `delete()`
+
+### Project Structure
+```text
+spring-jdbc/
+├── pom.xml
+└── src/
+    └── main/
+        └── java/
+            └── springjdbc/
+                ├── JdbcConfig.java
+                ├── JdbcTemplateDemo.java
+                ├── QueryDemo.java
+                ├── CrudDemo.java
+                ├── PreparedStatementDemo.java
+                ├── SingleRowQueryDemo.java
+                ├── BeanPropertyRowMapperDemo.java
+                └── dao/
+                    ├── Laptop.java
+                    ├── LaptopDao.java
+                    └── DaoDemo.java
+```
